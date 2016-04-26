@@ -4,9 +4,6 @@
 	<comment></comment>
 	<projects>
 		<project>library</project>
-		<project>SlidingMenuLibrary</project>
-		<project>ViewPagerIndicatorLibrary</project>
-		<project>viewPagerlibrary</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

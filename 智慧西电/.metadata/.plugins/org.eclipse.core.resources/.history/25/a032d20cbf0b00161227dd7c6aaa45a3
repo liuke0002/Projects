@@ -1,0 +1,127 @@
+package com.liuke.zhbj.pager.menu_ipl;
+
+import java.util.ArrayList;
+
+import android.app.Activity;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.ImageButton;
+
+import com.jeremyfeinstein.slidingmenu.lib.CustomViewAbove.OnPageChangeListener;
+import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
+import com.liuke.zhbj.R;
+import com.liuke.zhbj.activity.MainActivity;
+import com.liuke.zhbj.bean.Categories.NewsCenterCategories;
+import com.liuke.zhbj.pager.MenuDetailBasePage;
+import com.liuke.zhbj.pager.NewsTabPager;
+import com.liuke.zhbj.pager.menu_ipl.NewsDetail.TabAdapter;
+import com.viewpagerindicator.TabPageIndicator;
+
+public class NewsDetail extends MenuDetailBasePage{
+
+	private ArrayList<NewsCenterCategories> mNewsTabs;
+	private ViewPager vp_news;
+	private ImageButton ib_tabs;
+	private TabPageIndicator tabIndicator;
+	private ArrayList<NewsTabPager>mPagers;
+	private int mCurPos;
+	
+	public NewsDetail(Activity activity,
+			ArrayList<NewsCenterCategories> newsTabDetails) {
+		super(activity);
+		mNewsTabs = newsTabDetails;
+	}
+
+	@Override
+	public View initView() {
+		View view = View.inflate(mActivity, R.layout.news_detail, null);
+		vp_news = (ViewPager) view.findViewById(R.id.vp_news);
+		ib_tabs = (ImageButton) view.findViewById(R.id.ib_tabs); 
+		tabIndicator = (TabPageIndicator)view.findViewById(R.id.news_tab_indicator);
+		return view;
+	}
+
+	@Override
+	public void initData() {
+		mPagers=new ArrayList<NewsTabPager>();
+		for(int i=0;i<mNewsTabs.size();i++){
+			mPagers.add(new NewsTabPager(mActivity, mNewsTabs.get(i)));
+		}
+		vp_news.setAdapter(new TabAdapter());
+		tabIndicator.setViewPager(vp_news);
+		setListener();
+	}
+
+	private void setListener() {
+		ib_tabs.setOnClickListener(new OnClickListener() {
+			
+
+			@Override
+			public void onClick(View v) {
+				mCurPos = vp_news.getCurrentItem();
+				vp_news.setCurrentItem(++mCurPos);
+			}
+		});
+		tabIndicator.setOnPageChangeListener(new OnPageChangeListener() {
+			
+			@Override
+			public void onPageSelected(int position) {
+				MainActivity mainUi=(MainActivity) mActivity;
+				SlidingMenu slidingMenu = mainUi.getSlidingMenu();
+				if(position==0){
+					slidingMenu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
+				}else{
+					slidingMenu.setTouchModeAbove(SlidingMenu.TOUCHMODE_NONE);
+					
+				}
+			}
+			
+			@Override
+			public void onPageScrolled(int position, float positionOffset,
+					int positionOffsetPixels) {
+				
+			}
+			
+			@Override
+			public void onPageScrollStateChanged(int state) {
+				
+			}
+		});
+	}
+
+	class TabAdapter extends PagerAdapter {
+
+		@Override
+		public CharSequence getPageTitle(int position) {
+			return mNewsTabs.get(position).title;
+		}
+		
+		@Override
+		public Object instantiateItem(ViewGroup container, int position) {
+			View view=mPagers.get(position).mRootView;
+			mPagers.get(position).initData();
+			container.addView(view);
+			return view;
+		}
+
+		@Override
+		public void destroyItem(ViewGroup container, int position, Object object) {
+			container.removeView((View) object);
+		}
+
+		@Override
+		public int getCount() {
+			return mNewsTabs.size();
+		}
+
+		@Override
+		public boolean isViewFromObject(View view, Object object) {
+			return view == object;
+		}
+
+	}
+
+	
+}
+	

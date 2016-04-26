@@ -7,8 +7,5 @@
 	<classpathentry exported="true" kind="lib" path="libs/gson-2.3.1.jar"/>
 	<classpathentry exported="true" kind="lib" path="libs/xUtils-2.6.14.jar" sourcepath="F:/黑马/day55_智慧北京第一天（更多视频资料关注微信公众号【菜鸟要飞】）/day01/Day01资料/开源框架/xutils框架/xUtils-master/xUtils-master/library/src"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/SlidingMenuLibrary"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/ViewPagerIndicatorLibrary"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/viewPagerlibrary"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
