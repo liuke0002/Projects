@@ -1,0 +1,99 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/TitleStyle"
+        android:text="手机防盗" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textView1"
+            style="@style/Content1Style"
+            android:text="安全号码" />
+
+        <TextView
+            android:id="@+id/tvPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/listview_divider" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textView1"
+            style="@style/Content1Style"
+            android:text="安全防护是否开启" />
+
+        <ImageView
+            android:id="@+id/ivProtect"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/lock" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/listview_divider" />
+     <TextView
+            android:id="@+id/textView1"
+            style="@style/Content1Style"
+            android:onClick="reEnter"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:gravity="left"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/shape_select"
+            android:text="重新进入设置向导" />
+     <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/listview_divider" />
+
+     <TextView
+         android:id="@+id/text"
+         android:layout_marginTop="5dp"
+         style="@style/Content1Style"
+         android:gravity="left"
+         android:padding="3dp"
+         android:layout_width="match_parent"
+         android:background="#ccc"
+         android:text="功能简介" />
+     
+     <TextView 
+         style="@style/ContentStyle"
+         android:text="GPS追踪：#*location*#"/>
+     <TextView 
+         style="@style/ContentStyle"
+         android:text="远程锁屏：#*locksrceen*#"/>
+     <TextView 
+         style="@style/ContentStyle"
+         android:text="远程报警：#*alerm*#"/>
+     <TextView 
+         style="@style/ContentStyle"
+         android:text="远程删除数据：#*wipedata*#"/>
+     
+
+</LinearLayout>

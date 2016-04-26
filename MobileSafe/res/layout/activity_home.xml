@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/TitleStyle"
+        android:text="功能列表" />
+    
+    <com.liuke.mobilesafe.view.FocusedTextView 
+        android:layout_width="wrap_content"
+        android:textColor="@color/black"
+        android:text="361°手机安全卫士，温馨提醒：珍惜时间！珍惜生命！追求卓越！真诚处世！"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"/>
+    
+    <GridView android:id="@+id/gvHome"
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:verticalSpacing="10dp"
+        android:numColumns="3"
+        android:layout_width="match_parent"></GridView>
+
+</LinearLayout>

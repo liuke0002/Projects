@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <TextView style="@style/TitleStyle"
+        android:text="高级工具"/>
+
+    <TextView
+        android:id="@+id/tvPhoneAdressQuery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fouction_button_green"
+        android:drawableLeft="@android:drawable/ic_dialog_map"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="电话归属地查询"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/tvSmsBackup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fouction_button_green"
+        android:drawableLeft="@android:drawable/ic_menu_manage"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="短信备份"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/tvCallShortcut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fouction_button_green"
+        android:drawableLeft="@android:drawable/ic_dialog_dialer"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="一键呼叫"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/tvAppLock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fouction_button_green"
+        android:drawableLeft="@android:drawable/ic_menu_recent_history"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="程序锁"
+        android:textSize="20sp" />
+
+</LinearLayout>

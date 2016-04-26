@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            style="@style/TitleStyle"
+            android:text="黑名单管理" />
+        <Button android:id="@+id/btnAddBlack"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            
+            android:layout_height="wrap_content"
+            android:text="添加"/>
+    </RelativeLayout>
+
+    <include
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:id="@+id/list_view"
+        layout="@layout/list_view" />
+
+</LinearLayout>
