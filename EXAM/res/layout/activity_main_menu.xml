@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/main_menu_bg" 
+    android:layout_gravity="center">
+	
+	<ImageView
+	    android:id="@+id/ivTitle"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/exam_title"
+	    android:layout_marginTop="50dp"
+	    android:layout_centerHorizontal="true"/>
+	
+	<Button android:id="@+id/btnExam"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="130dp"
+	    android:layout_marginTop="30dp"
+	    android:layout_below="@id/ivTitle"
+	    android:drawableTop="@drawable/main_menu_exam"
+	    android:background="@drawable/selector_main_menu_btn"
+	    android:text="开始考试"/>
+	<Button android:id="@+id/btnResult"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="130dp"
+	    android:layout_marginTop="8dp"
+	    android:layout_below="@id/btnExam"
+	    android:drawableTop="@drawable/main_menu_result"
+	    android:background="@drawable/selector_main_menu_btn"
+	    android:text="查询成绩"/>
+	<Button android:id="@+id/btnMessage"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="130dp"
+	    android:layout_marginTop="8dp"
+	    android:layout_below="@id/btnResult"
+	    android:drawableTop="@drawable/main_menu_message"
+	    android:background="@drawable/selector_main_menu_btn"
+	    android:text="考试规则"/>
+	<Button android:id="@+id/btnExit"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="130dp"
+	    android:layout_marginTop="8dp"
+	    android:layout_below="@id/btnMessage"
+	    android:drawableTop="@drawable/main_menu_exit"
+	    android:background="@drawable/selector_main_menu_btn"
+	    android:text="退出考试"/>
+	
+	
+	
+</RelativeLayout>

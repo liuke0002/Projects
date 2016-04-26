@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/exam_bg" >
+
+    <TextView android:id="@+id/tvExamInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/examInfo"
+        android:layout_marginLeft="40dp"
+        android:textColor="#000"
+        android:layout_marginTop="72dp"/>
+    
+    <EditText android:id="@+id/etQuestion"
+       android:layout_width="match_parent"
+       android:layout_height="160dp" 
+       android:text="@string/question"
+       android:paddingLeft="25dp"
+       android:cursorVisible="false"
+       android:layout_marginBottom="10dp"
+       android:background="@drawable/exam_question_content"/>
+    
+    <RadioGroup android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <CheckBox android:id="@+id/chkA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A"
+            android:layout_marginLeft="45dp"/>
+        <CheckBox android:id="@+id/chkB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="B"
+            android:layout_marginLeft="15dp"/>
+        <CheckBox android:id="@+id/chkC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="C"
+            android:layout_marginLeft="15dp"/>
+        <CheckBox android:id="@+id/chkD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="D"
+            android:layout_marginLeft="15dp"/>
+    </RadioGroup>
+
+    <Gallery android:id="@+id/gallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:spacing="1dp"/>
+    <TextView android:id="@+id/tvLeftTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="剩余时间：9:45"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"/>
+</LinearLayout>
