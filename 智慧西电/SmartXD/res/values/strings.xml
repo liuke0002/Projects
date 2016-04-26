@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">智慧西电</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_guide">GuideActivity</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_news_item">NewsItemActivity</string>
+    <string name="border_top">Border Top</string>
+    <string name="border_bottom">Border Bottom</string>
+    <string name="image_url">Image Url</string>
+    <string name="my_message">消息通知</string>
+    <string name="feedback">意见反馈</string>
+    <string name="service_rules">服务条款</string>
+    <string name="about_us">关于我们</string>
+
+</resources>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/shape_btn_rounded_rectangle"
+        android:orientation="vertical"
+        android:padding="5dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="4dp"
+            android:text="今日西电"
+            android:textColor="@color/dark_grey" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_grey" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp" >
+
+            <TextView
+                style="@style/TextViewStyle"
+                android:gravity="left"
+                android:paddingLeft="16dp"
+                android:text="晨练指数" />
+
+            <TextView
+                android:id="@+id/tv_exercise_index"
+                style="@style/TextViewStyle"
+                android:gravity="left"
+                android:paddingLeft="16dp"
+                android:textColor="#c000" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_grey" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp" >
+
+            <TextView
+                style="@style/TextViewStyle"
+                android:gravity="left"
+                android:paddingLeft="16dp"
+                android:text="旅游指数" />
+
+            <TextView
+                android:id="@+id/tv_travel_index"
+                style="@style/TextViewStyle"
+                android:gravity="left"
+                android:paddingLeft="16dp"
+                android:textColor="#c000" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_grey" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp" >
+
+            <TextView
+                style="@style/TextViewStyle"
+                android:gravity="left"
+                android:paddingLeft="16dp"
+                android:text="穿衣指数" />
+
+            <TextView
+                android:id="@+id/tv_dressing_index"
+                style="@style/TextViewStyle"
+                android:gravity="left"
+                android:paddingLeft="16dp"
+                android:textColor="#c000" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_grey" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp" >
+
+            <TextView
+                style="@style/TextViewStyle"
+                android:gravity="left"
+                android:paddingLeft="16dp"
+                android:text="穿衣建议" />
+
+            <TextView
+                android:id="@+id/tv_dressing_advice"
+                style="@style/TextViewStyle"
+                android:gravity="left"
+                android:paddingLeft="16dp"
+                android:textColor="#c000" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
