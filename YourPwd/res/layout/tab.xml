@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/tab_bank"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/time"
+        android:layoutAnimation="@anim/list_item_layout"
+        android:orientation="vertical" >
+
+        <AnalogClock
+            android:id="@+id/myAnalogClock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dip" />
+
+        <RadioGroup
+            android:id="@+id/bank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:orientation="vertical"
+            android:paddingLeft="80dip" >
+
+            <RadioButton
+                android:id="@+id/abcBank"
+                android:text="农业银行" />
+
+            <RadioButton
+                android:id="@+id/cbcBank"
+                android:text="建设银行" />
+
+            <RadioButton
+                android:id="@+id/comBank"
+                android:text="交通银行" />
+
+            <RadioButton
+                android:id="@+id/comBank"
+                android:text="工商银行" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btn_bankSure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="40dip"
+            android:text="添加" />
+    </LinearLayout>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/tab_forum"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/poem"
+        android:orientation="vertical" >
+        <SlidingDrawer 
+            android:id="@+id/slidingDrawer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:handle="@+id/handle"
+            android:orientation="vertical"
+            android:content="@+id/content">
+            <ImageView 
+                android:src="@drawable/open"
+                android:id="@+id/handle"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"/>
+            <LinearLayout
+                android:id="@+id/content" 
+                xmlns:android="http://schemas.android.com/apk/res/android"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:orientation="vertical" ></LinearLayout>
+		 </SlidingDrawer>
+    </LinearLayout>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/tab_other"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:padding="5dip" >
+
+        <RadioGroup
+            android:id="@+id/other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layoutAnimation="@anim/list_itm_layout2"
+            android:orientation="vertical" >
+
+            <RadioButton
+                android:id="@+id/other_qq"
+                android:layout_marginLeft="40dip"
+                android:text="QQ密码"
+                android:textColor="#FF0000" />
+
+            <RadioButton
+                android:id="@+id/other_weixin"
+                android:layout_marginLeft="120dip"
+                android:text="微信密码"
+                android:textColor="#FFFFFF" />
+
+            <RadioButton
+                android:id="@+id/other_pay"
+                android:layout_marginLeft="20dip"
+                android:text="支付宝密码"
+                android:textColor="#00FF00" />
+
+            <RadioButton
+                android:id="@+id/other_tieba"
+                android:layout_marginLeft="180dip"
+                android:text="百度贴吧"
+                android:textColor="#130012" />
+
+            <RadioButton
+                android:id="@+id/other_meituan"
+                android:layout_marginLeft="40dip"
+                android:text="美团密码"
+                android:textColor="#0000FF" />
+
+            <RadioButton
+                android:id="@+id/other_dazhong"
+                android:layout_marginLeft="120dip"
+                android:text="大众点评"
+                android:textColor="#FF0012" />
+
+            <RadioButton
+                android:id="@+id/other_browser"
+                android:layout_marginLeft="20dip"
+                android:text="浏览器密码"
+                android:textColor="#00FF12" />
+
+            <RadioButton
+                android:id="@+id/other_ebook"
+                android:layout_marginLeft="180dip"
+                android:text="电子书密码"
+                android:textColor="#0000FF" />
+
+            <RadioButton
+                android:id="@+id/other_"
+                android:layout_marginLeft="40dip"
+                android:text="文件夹密码"
+                android:textColor="#FFFFFF" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btn_otherSure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="2dip"
+            android:text="添加" />
+    </RelativeLayout>
+
+</LinearLayout>

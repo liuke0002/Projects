@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+	<TableRow
+	    android:layout_marginBottom="20dip">
+	    <TextView 
+	        android:text="@string/display_username"
+	        android:layout_marginLeft="20dip"
+	        android:textSize="8pt"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"/>
+	    <EditText 
+	        android:id="@+id/update_username"
+	        android:width="90pt"
+	        android:layout_height="wrap_content"
+	        android:inputType="text"/>
+	</TableRow>    
+	<TableRow
+	    android:layout_marginBottom="10dip">
+	    <TextView 
+	        android:text="@string/display_password"
+	        android:layout_marginLeft="20dip"
+	        android:textSize="8pt"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"/>
+	    <EditText 
+	        android:id="@+id/update_password"
+	        android:inputType="textPassword"
+	        android:width="90pt"
+	        android:layout_height="wrap_content"/>
+	</TableRow>    
+
+</TableLayout>

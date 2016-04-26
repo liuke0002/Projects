@@ -1,0 +1,28 @@
+<resources>
+
+    <string name="app_name">YourPwd</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">My Password</string>
+    <string name="display_username">用户</string>
+    <string name="display_password">密码</string>
+    <string name="bankAccount">BankAccount</string>
+    <string name="bankRemark">BankRemark</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+	<string name="add">添加新密码</string>
+	<string name="delete">删除旧密码</string>
+	<string name="change">修改旧密码</string>
+	<string name="display">显示旧密码</string>
+	<string name="bankpwd">银行密码</string>
+	<string name="talkpwd">论坛密码</string>
+	<string name="otherpwd">其他密码</string>
+	<string name="qqpwd">QQ密码</string>
+	<string name="save">保存</string>
+	<string name="smallTalk">微信密码</string>
+	<string name="forum">forum password</string>
+	<string name="other">other password</string>
+	<string name="meituan">美团密码</string>
+	<string name="AddActivity">add new</string>
+	<string name="bank">bank password</string>
+</resources>

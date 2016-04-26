@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_consult"
+        android:enabled="true"
+        android:orderInCategory="100"
+        android:title="Consult Me"
+        android:icon="@drawable/phone"
+        android:visible="true"/>
+    <item
+        android:id="@+id/menu_play"
+        android:orderInCategory="100"
+        android:title="Play Music"
+        android:enabled="true"
+        android:visible="true"
+        android:icon="@drawable/music"/>
+
+</menu>

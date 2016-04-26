@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="30dip"
+    android:paddingBottom="30dip"
+    android:background="@drawable/background1"
+    android:layoutAnimation="@anim/list_item_layout">
+    
+    <Button 
+        android:id="@+id/add"
+        android:layout_width="200dip"
+        android:layout_height="wrap_content"
+        android:text="@string/add"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dip"
+        android:layout_marginTop="80dip"/>
+    <Button 
+        android:id="@+id/delete"
+        android:layout_width="200dip"
+        android:layout_height="wrap_content"
+        android:text="@string/delete"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/add"
+        android:layout_marginBottom="10dip"/>
+    <Button 
+        android:id="@+id/change"
+        android:layout_width="200dip"
+        android:layout_height="wrap_content"
+        android:text="@string/change"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/delete"
+        android:layout_marginBottom="10dip"/>
+    <Button 
+        android:id="@+id/display"
+        android:layout_width="200dip"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/display"
+        android:layout_below="@id/change"/>
+   
+</RelativeLayout>

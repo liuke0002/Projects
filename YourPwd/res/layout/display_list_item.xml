@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dip"
+    android:orientation="horizontal" 
+    android:paddingRight="10dip"
+    android:paddingTop="2dip"
+    android:paddingBottom="2dip"
+    android:background="@drawable/item_pressed">
+
+    <ImageView
+        android:id="@+id/display_name"
+        android:layout_width="60dip"
+        android:layout_height="70dp"
+        android:contentDescription="@string/hello_world"
+        android:scaleType="fitXY"
+        android:src="@drawable/touxiang" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#FF00FF"
+                android:text="@string/display_username"
+                android:layout_marginBottom="5dip"
+                android:layout_marginTop="3dip"
+                android:textSize="10pt" />
+
+            <TextView
+                android:id="@+id/display_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:typeface="serif"
+                android:textSize="7pt" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FF00"
+                android:text="@string/display_password"
+                android:textSize="10pt" />
+
+            <TextView
+                android:id="@+id/display_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:textSize="7pt" 
+                android:text="@string/hello_world"/>
+        </LinearLayout>
+        </LinearLayout>
+</LinearLayout>

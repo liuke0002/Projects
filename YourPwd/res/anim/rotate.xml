@@ -1,0 +1,14 @@
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shareInterpolator="true"
+    android:fillBefore="true"
+    android:fillAfter="false"
+    android:duration="2000"
+    android:startOffset="300">
+    <rotate 
+        android:fromDegrees="0"
+        android:toDegrees="360"
+        android:pivotX="100%"
+        android:pivotY="100%"
+        android:fillBefore="false"
+        android:fillAfter="true"/>
+</set>

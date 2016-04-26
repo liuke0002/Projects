@@ -1,0 +1,37 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="liuke.yourpwd"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="15" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" 
+        android:name="liuke.yourpwd.MyApplication">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AddActivity"
+            android:label="@string/AddActivity"></activity>
+        <activity android:name=".WriteToSD" android:label="@string/bank"></activity>
+        <activity android:name="liuke.add.AddBank" android:label="@string/bank"></activity>
+        <activity android:name="liuke.add.AddForum" android:label="@string/forum"></activity>
+        <activity android:name="liuke.add.AddOther" android:label="@string/other"></activity>
+        <activity android:name="liuke.yourpwd.DeleteActivity" android:label="delete"></activity>
+        <activity android:name="liuke.yourpwd.DisplayActivity" android:label="display"></activity>
+        <activity android:name="liuke.yourpwd.UpdateActivity" android:label="change"></activity>
+        <activity android:name="liuke.yourpwd.PasswordActivity"></activity>
+    </application>
+
+</manifest>
