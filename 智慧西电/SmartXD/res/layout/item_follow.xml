@@ -11,7 +11,7 @@
 
         <ImageView
             android:id="@+id/iv_author"
-            android:src="@drawable/icon_150"
+            android:src="@drawable/ic_launcher128"
             android:scaleType="centerCrop"
             android:layout_width="60dp"
             android:layout_height="60dp"

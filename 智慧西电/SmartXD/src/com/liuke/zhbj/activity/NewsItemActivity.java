@@ -91,7 +91,7 @@ public class NewsItemActivity extends Activity implements OnClickListener {
 			String[] items = { "超小号字体", "小号字体", "正常字体", "大号字体", "超大号字体" };
 			Builder builder = new AlertDialog.Builder(this);
 			builder.setTitle("字体选择");
-			builder.setIcon(R.drawable.ic_launcher);
+			builder.setIcon(R.drawable.ic_launcher128);
 			builder.setSingleChoiceItems(items, 2,
 					new DialogInterface.OnClickListener() {
 

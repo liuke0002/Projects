@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.wiipu.bimu.activity.LoginActivity">
+
+    <com.wiipu.bimu.view.AppTitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:barBackground="@color/colorPrimary"
+        app:titleColor="@color/colorWhite"
+        app:titleText="登录"></com.wiipu.bimu.view.AppTitleBar>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        android:padding="40dp">
+
+        <com.wiipu.bimu.view.ClearEditText
+            android:id="@+id/login_et_phone_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/please_input_phone_num"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:singleLine="true"/>
+
+
+        <EditText
+            android:id="@+id/login_et_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/please_input_pwd"
+            android:inputType="textPassword"
+            android:singleLine="true"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/login_btn_find_pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:onClick="onClick"
+                android:text="@string/find_pwd"
+                android:textColor="@color/colorGray"/>
+
+            <Button
+                android:id="@+id/login_btn_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="right"
+                android:background="@null"
+                android:onClick="onClick"
+                android:text="@string/register"
+                android:textColor="@color/colorGray"/>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/login_btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_btn_rounded_rectangle_big_corner_red"
+            android:onClick="onClick"
+            android:text="@string/login"
+            android:textColor="@color/colorWhite"/>
+    </LinearLayout>
+
+
+</LinearLayout>

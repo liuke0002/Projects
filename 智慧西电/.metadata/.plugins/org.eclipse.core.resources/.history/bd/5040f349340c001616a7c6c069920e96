@@ -1,0 +1,117 @@
+package com.wiipu.bimu.activity;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.graphics.drawable.Drawable;
+import android.os.Bundle;
+import android.text.TextUtils;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+
+import com.lidroid.xutils.HttpUtils;
+import com.liuke.zhbj.R;
+import com.liuke.zhbj.view.ClearEditText;
+
+public class LoginActivity extends Activity {
+    private EditText et_pwd;
+    private ClearEditText et_phone_num;
+    private Button btn_login;
+
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_login);
+
+        init();
+
+    }
+
+
+    private void init() {
+        btn_login = (Button) findViewById(R.id.login_btn_login);
+
+        et_phone_num = (ClearEditText) findViewById(R.id.login_et_phone_num);
+        et_pwd = (EditText) findViewById(R.id.login_et_pwd);
+
+        Drawable pwdDrawable = getResources().getDrawable(R.drawable.password);
+        int dimension  = UiUtils.dip2px(20);
+        pwdDrawable.setBounds(0,0,dimension,dimension);
+        et_pwd.setCompoundDrawables(pwdDrawable,null,null,null);
+        Drawable clearDrawable = et_phone_num.getCompoundDrawables()[2];
+        Drawable phoneDrawable = getResources().getDrawable(R.drawable.phone);
+        phoneDrawable.setBounds(0,0,dimension,dimension);
+        et_phone_num.setCompoundDrawables(phoneDrawable,null,clearDrawable,null);
+    }
+
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.login_btn_register:
+                startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
+                break;
+            case R.id.login_btn_find_pwd:
+                startActivity(new Intent(LoginActivity.this, FindPwdActivity.class));
+                break;
+            case R.id.login_btn_login:
+                login();
+                break;
+        }
+    }
+
+    private void login() {
+        String phone_num = et_phone_num.getText().toString().trim();
+        String pwd = et_pwd.getText().toString().trim();
+        pwd = EncryptionUtils.encrypt(pwd,phone_num);
+
+        if (testValid()) {
+            LoginUtils.startLogin(new LoginRequest(phone_num,pwd), new LoginUtils.LoginListener() {
+                @Override
+                public void onResponse(JsonReceive receive) {
+                    LoginResponse response = (LoginResponse) receive.getResponse();
+                    if(response.getExe_success().equals("1")){
+                        //code 1 浠ｈ〃鐧诲綍鎴愬姛 锛� 2浠ｈ〃涓烘湭娉ㄥ唽
+                        if(response.getCode().equals("1")){
+                            LoginUtils.setLoginUid(response.getUid());
+                            LoginUtils.setLoginStatus(true);
+                            startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                        }
+                    }else {
+                        if(response.getCode().equals("2")){
+                            showDialog("姝ゅ彿鐮佸皻鏈敞鍐�!");
+                        }
+                        if(response.getCode().equals("3")){
+                            showDialog("瀵嗙爜閿欒");
+                        }
+                    }
+                }
+
+                @Override
+                public void onError(VolleyError error) {
+                    showDialog("鏈嶅姟鍣ㄤ技涔庡湪寮�灏忓樊~");
+                    L.d(error.toString());
+                }
+            });
+        }
+    }
+
+
+    private boolean testValid() {
+        if(!AppUtils.isMobileNO(et_phone_num.getText().toString().trim())){
+            showDialog("璇疯緭鍏ユ纭殑鎵嬫満鍙风爜");
+            return false;
+        }else if ( TextUtils.isEmpty(et_pwd.getText().toString().trim())) {
+            showDialog("瀵嗙爜涓嶈兘涓虹┖");
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    protected void onDestroy() {
+        HttpUtils.cancelAll(this);
+        super.onDestroy();
+    }
+}

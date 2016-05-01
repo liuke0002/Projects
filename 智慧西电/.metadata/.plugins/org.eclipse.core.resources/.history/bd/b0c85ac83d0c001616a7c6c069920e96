@@ -1,0 +1,44 @@
+package com.liuke.zhbj.bean;
+
+import java.util.List;
+
+public class AppointUsers {
+
+	public int exe_success;
+	public List<AppointUser> users;
+	
+	
+	public AppointUsers(int exe_success, List<AppointUser> users) {
+		super();
+		this.exe_success = exe_success;
+		this.users = users;
+	}
+	
+
+
+	class AppointUser{
+		private String phone;
+		private String name;
+		public AppointUser(String phone, String name) {
+			super();
+			this.phone = phone;
+			this.name = name;
+		}
+		public String getPhone() {
+			return phone;
+		}
+		public void setPhone(String phone) {
+			this.phone = phone;
+		}
+		public String getName() {
+			return name;
+		}
+		public void setName(String name) {
+			this.name = name;
+		}
+	}
+	
+	
+	
+
+}

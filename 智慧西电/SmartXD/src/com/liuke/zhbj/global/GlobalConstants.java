@@ -5,6 +5,8 @@ public class GlobalConstants {
 	public final static String preUrl="http://10.0.3.2:8080/zhbj";
 	public final static String CATEGORIES_URL=preUrl+"/categories.json";
 	public final static String PHOTOS_URL=preUrl+"/photos/photos_1.json";
+//	http://172.28.103.2/job/servlet/DataServlet
+	public final static String APPOINT_URL="http://172.28.103.2:80/job/servlet/DataServlet";
+	public final static String LOGIN_URL="http://172.28.103.2:80/job/servlet/LoginServlet";
 	
-
 }

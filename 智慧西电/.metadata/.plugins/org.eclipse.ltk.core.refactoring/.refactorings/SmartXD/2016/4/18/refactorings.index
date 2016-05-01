@@ -1,2 +1,21 @@
 1461682467274	Delete element
 1461682622534	Delete element
+1461722578925	Delete element
+1461722594193	Rename resource 'ic_lanucher96.png'
+1461731290598	Convert local variable 'mLm' to field
+1461731786364	Convert local variable 'latitude' to field
+1461731790872	Convert local variable 'longitude' to field
+1461734505391	Extract method 'getAppointData'
+1461735260268	Delete element
+1461735317915	Copy file
+1461735326872	Copy file
+1461735540274	Convert local variable 'etName' to field
+1461735835506	Rename resource 'ic_launcher.png'
+1461736026139	Convert local variable 'tv_name' to field
+1461736764520	Rename compilation unit 'AppointUser.java'
+1461740998926	Convert local variable 'btn_exit' to field
+1461747945901	Convert local variable 'phone_num' to field
+1461747951275	Convert local variable 'pwd' to field
+1461747957191	Convert local variable 'name' to field
+1461762622525	Convert local variable 'tv_title' to field
+1461762736822	Convert local variable 'rl' to field

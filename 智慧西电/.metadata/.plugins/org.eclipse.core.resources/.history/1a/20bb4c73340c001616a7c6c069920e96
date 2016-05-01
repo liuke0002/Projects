@@ -1,0 +1,68 @@
+package com.liuke.zhbj.activity;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.graphics.drawable.Drawable;
+import android.os.Bundle;
+import android.text.TextUtils;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+
+import com.lidroid.xutils.HttpUtils;
+import com.liuke.zhbj.R;
+import com.liuke.zhbj.view.ClearEditText;
+
+public class LoginActivity extends Activity {
+    private EditText et_pwd;
+    private ClearEditText et_phone_num;
+    private Button btn_login;
+
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_login);
+
+        init();
+
+    }
+
+
+    private void init() {
+        btn_login = (Button) findViewById(R.id.login_btn_login);
+
+        et_phone_num = (ClearEditText) findViewById(R.id.login_et_phone_num);
+        et_pwd = (EditText) findViewById(R.id.login_et_pwd);
+
+        
+    }
+
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.login_btn_register:
+//                startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
+                break;
+            case R.id.login_btn_find_pwd:
+//                startActivity(new Intent(LoginActivity.this, FindPwdActivity.class));
+                break;
+            case R.id.login_btn_login:
+                login();
+                break;
+        }
+    }
+
+    private void login() {
+        String phone_num = et_phone_num.getText().toString().trim();
+        String pwd = et_pwd.getText().toString().trim();
+    }
+
+
+    
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+}

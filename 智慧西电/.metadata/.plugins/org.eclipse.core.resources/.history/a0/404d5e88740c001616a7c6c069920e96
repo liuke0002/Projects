@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    
+    <TextView 
+        android:id="@+id/tv_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.liuke.zhbj.view.RadarScanView
+        android:id="@+id/radarScanView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </com.liuke.zhbj.view.RadarScanView>
+
+    <com.liuke.zhbj.view.RandomTextView
+        android:id="@+id/random_textview"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true" >
+    </com.liuke.zhbj.view.RandomTextView>
+
+    <Button
+        android:id="@+id/btn_appoint"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/shape_btn_rounded_rectangle_big_corner_red"
+        android:gravity="center"
+        android:text="约起来"
+        android:textColor="#fff"
+        android:textSize="16sp" />
+
+</RelativeLayout>

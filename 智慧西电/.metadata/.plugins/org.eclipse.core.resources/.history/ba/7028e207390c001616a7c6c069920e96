@@ -1,0 +1,5 @@
+package com.liuke.zhbj.bean;
+
+public class AppointUser {
+
+}

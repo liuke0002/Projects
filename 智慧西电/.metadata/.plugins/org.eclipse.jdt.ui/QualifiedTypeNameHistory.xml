@@ -1,4 +1,40 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="android.support.v4.view.ViewPager"/>
+<fullyQualifiedTypeName name="cn.jpush.android.api.JPushInterface"/>
+<fullyQualifiedTypeName name="android.content.Context"/>
+<fullyQualifiedTypeName name="android.location.LocationManager"/>
+<fullyQualifiedTypeName name="android.location.Criteria"/>
+<fullyQualifiedTypeName name="android.location.LocationListener"/>
+<fullyQualifiedTypeName name="android.R"/>
+<fullyQualifiedTypeName name="android.R.anim"/>
+<fullyQualifiedTypeName name="android.view.Window"/>
+<fullyQualifiedTypeName name="com.liuke.zhbj.activity.MainActivity"/>
+<fullyQualifiedTypeName name="org.apache.http.client.methods.HttpGet"/>
+<fullyQualifiedTypeName name="com.liuke.zhbj.pager.impl.GovAffairsPager"/>
+<fullyQualifiedTypeName name="com.google.gson.Gson"/>
+<fullyQualifiedTypeName name="com.liuke.zhbj.bean.AppointUser"/>
+<fullyQualifiedTypeName name="com.liuke.zhbj.bean.AppointUsers.AppointUser"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="com.liuke.zhbj.R"/>
+<fullyQualifiedTypeName name="com.liuke.zhbj.R.color"/>
+<fullyQualifiedTypeName name="java.lang.Double"/>
+<fullyQualifiedTypeName name="com.google.gson.JsonArray"/>
+<fullyQualifiedTypeName name="java.util.Timer"/>
+<fullyQualifiedTypeName name="java.util.TimerTask"/>
+<fullyQualifiedTypeName name="java.lang.Runnable"/>
+<fullyQualifiedTypeName name="android.content.Intent"/>
+<fullyQualifiedTypeName name="android.text.TextUtils"/>
+<fullyQualifiedTypeName name="com.liuke.zhbj.activity.LoginActivity"/>
+<fullyQualifiedTypeName name="com.lidroid.xutils.HttpUtils"/>
+<fullyQualifiedTypeName name="com.lidroid.xutils.http.RequestParams"/>
+<fullyQualifiedTypeName name="com.lidroid.xutils.http.client.HttpRequest.HttpMethod"/>
+<fullyQualifiedTypeName name="com.liuke.zhbj.global.GlobalConstants"/>
+<fullyQualifiedTypeName name="com.lidroid.xutils.http.callback.RequestCallBack"/>
+<fullyQualifiedTypeName name="com.liuke.zhbj.utils.MD5Utils"/>
+<fullyQualifiedTypeName name="com.liuke.zhbj.utils.PrefUtils"/>
+<fullyQualifiedTypeName name="android.widget.Toast"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
+<fullyQualifiedTypeName name="com.liuke.zhbj.activity.RegisterActivity"/>
 </qualifiedTypeNameHistroy>

@@ -54,14 +54,13 @@ public class NewsCenterPager extends BasePager {
 			@Override
 			public void onSuccess(ResponseInfo<String> responseInfo) {
 				mCategoryInfo = responseInfo.result;
-				System.out.println("结果:"+mCategoryInfo);
 				parseData();
 			}
 
 			@Override
 			public void onFailure(HttpException error, String msg) {
 				error.printStackTrace();
-				Toast.makeText(mActivity, "NewsCenterPager请求错误", Toast.LENGTH_SHORT).show();
+				Toast.makeText(mActivity, "请求服务器错误", Toast.LENGTH_SHORT).show();
 			}
 		});
 	}

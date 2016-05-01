@@ -5,6 +5,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.Window;
 
+import cn.jpush.android.api.JPushInterface;
+
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
 import com.liuke.zhbj.R;
@@ -44,5 +46,15 @@ public class MainActivity extends SlidingFragmentActivity {
 	public LeftMenuFragment getLeftMenuContent(){
 		LeftMenuFragment leftMenuFragment=(LeftMenuFragment) mFm.findFragmentByTag(MENU_FRAGMENT);
 		return leftMenuFragment;
+	}
+	@Override
+	protected void onPause() {
+		super.onPause();
+		JPushInterface.onPause(this);
+	}
+	@Override
+	protected void onResume() {
+		super.onResume();
+		JPushInterface.onResume(this);
 	}
 }

@@ -1,0 +1,84 @@
+package com.liuke.zhbj.view;
+
+import android.content.Context;
+import android.graphics.Rect;
+import android.graphics.drawable.Drawable;
+import android.util.AttributeSet;
+import android.view.MotionEvent;
+import android.widget.EditText;
+
+import com.liuke.zhbj.R;
+
+public class ClearEditText extends EditText {
+
+    private Drawable clearDrawable;
+    private boolean focused;
+
+    public ClearEditText(Context context) {
+        super(context);
+        init();
+    }
+
+    public ClearEditText(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        init();
+    }
+
+    public ClearEditText(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        init();
+    }
+
+    @Override
+    protected void onFocusChanged(boolean focused, int direction, Rect previouslyFocusedRect) {
+        super.onFocusChanged(focused, direction, previouslyFocusedRect);
+        if(focused){
+            setIconVisible(this.getText().toString().trim().length()>0);
+        }else {
+            setIconVisible(false);
+        }
+    }
+
+    private void init() {
+        clearDrawable = getCompoundDrawables()[2];
+        if (clearDrawable == null) {
+            clearDrawable = getResources().getDrawable(R.drawable.clear);
+        }
+        clearDrawable.setBounds(0,0,40,40);
+
+        setIconVisible(false);
+
+    }
+
+    private void setIconVisible(boolean visible) {
+        Drawable right = visible ? clearDrawable : null;
+        setCompoundDrawables(getCompoundDrawables()[0],getCompoundDrawables()[1],right,getCompoundDrawables()[3]);
+    }
+
+    @Override
+    protected void onTextChanged(CharSequence text, int start, int lengthBefore, int lengthAfter) {
+        super.onTextChanged(text, start, lengthBefore, lengthAfter);
+        setIconVisible(this.getText().toString().trim().length()>0);
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        if(event.getAction() == MotionEvent.ACTION_DOWN){
+            if(getCompoundDrawables()[2]!=null){
+                int x = (int)event.getX();
+                int y = (int)event.getY();
+                Rect rect = getCompoundDrawables()[2].getBounds();
+                int height = rect.height();
+                int distance = (getHeight() - height)/2;
+                boolean isInnerWidth = x > (getWidth() - getTotalPaddingRight()) && x < (getWidth() - getPaddingRight());
+                boolean isInnerHeight = y > distance && y <(distance + height);
+                if (isInnerWidth && isInnerHeight) {
+                    this.setText("");
+                }
+            }
+        }
+
+        return super.onTouchEvent(event);
+    }
+
+}

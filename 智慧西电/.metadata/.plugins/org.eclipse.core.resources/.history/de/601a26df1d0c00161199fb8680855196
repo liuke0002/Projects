@@ -1,0 +1,13 @@
+package com.liuke.zhbj;
+
+import android.app.Application;
+
+public class SmartXdApplication extends Application {
+	
+	@Override
+	public void onCreate() {
+		super.onCreate();
+		
+	}
+
+}
